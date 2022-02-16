@@ -1,3 +1,8 @@
 class Restaurant < ApplicationRecord
-  has_many :reviews
+  has_many :reviews, dependent: :destroy
+  validates :name, :address, presence: true
+  validates :category, inclusion: {
+    in: %w[chinese italian japanese french belgian],
+    message: 'We only foster chinese, italian, japanese, french or belgian'
+  }
 end
