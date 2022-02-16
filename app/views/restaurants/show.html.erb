@@ -1,6 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= @restaurant.name %></h1>
-<p>Find me in app/views/restaurants/show.html.erb</p>
+<div classe = container>
+  <h1><%= @restaurant.name %></h1>
+  <h5>Address:</h5>
+  <p><%= @restaurant.address %></p>
+  <h5>Phone:</h5>
+  <p><%= @restaurant.phone_number %></p>
+  <h5>Category:</h5>
+  <p><%= @restaurant.category %></p>
+  <h5>reviews:</h5>
+  <p><%= @restaurant.reviews %></p>
+</div>
 
+<%= link_to 'Leave a review', new_restaurant_review_path(@restaurant) %>
 <p><%= link_to '⟲ Back to list', restaurants_path %></p>
