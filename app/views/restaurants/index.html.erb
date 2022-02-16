@@ -1,9 +1,9 @@
-<h1>Restaurants</h1>
-
-<ul>
+<div class = "navbar-lewagon">
+  <h1>Restaurants</h1>
+  <%= link_to 'New Restaurant', new_restaurant_path, class: "btn btn-primary" %>
+</div>
+<ul class="list-unstyled container">
   <% @restaurants.each do |restaurant| %>
     <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
   <% end %>
 </ul>
-
-<%= link_to 'New Restaurant', new_restaurant_path %>
